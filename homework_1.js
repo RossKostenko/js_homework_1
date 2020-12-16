@@ -25,3 +25,9 @@ function greet(name, owner) {
 function litres(time) {
   return Math.floor (time / 2);
 }
+
+// https://www.codewars.com/kata/be-concise-i-the-ternary-operator/train/javascript
+
+function describeAge(a) {
+    return "You're a(n) "(+a<13?"kid":a<18?"teenager":a<65?"adult":"elderly");
+}
