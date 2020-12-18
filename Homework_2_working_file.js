@@ -5,6 +5,18 @@ function DNAtoRNA(dna) {
   return rna;
 }
 
+// with gi, that means that gi is ignoring register
+
+function DNAtoRNA(dna) {
+  let rna = dna.replace(/T/gi, "U");
+  return rna;
+}
+
+function DNAtoRNA(dna) {
+  let rna = dna.replaceAll("T", "U");
+  return rna;
+}
+
 https://www.codewars.com/kata/convert-a-string-to-an-array/train/javascript
 
 function stringToArray(string) {
@@ -14,7 +26,7 @@ function stringToArray(string) {
 }
 
 https://www.codewars.com/kata/577a98a6ae28071780000989/train/javascript
-// the shortest
+// the shortest not actual due to 2020
 
 function min(list){
   return Math.min.apply(null, list);
@@ -23,6 +35,18 @@ function min(list){
 function max(list){
   return Math.max.apply(null, list);
 }
+
+// even shorter 
+
+function min(list){
+  return Math.min(...list);
+}
+
+function max(list){
+  return Math.max(...list);
+}
+
+
 
 // short
 function min(list){
@@ -58,6 +82,8 @@ function max(list) {
 }
 
 https://www.codewars.com/kata/544a54fd18b8e06d240005c0/train/javascript
+
+// way too smaller
 
 function min(arr, toReturn) {
   let ind = 0;
