@@ -1,29 +1,54 @@
 https://www.codewars.com/kata/dna-to-rna-conversion/train/javascript
 
 function DNAtoRNA(dna) {
- // let rna;
-  for (let i=0; i<dna.length; i++) {
-    if (dna[i] !== "T") {
-     let rna = dna[i];
-      } else {
-     let rna = "U";
-    }
-  } return rna;
-  // create a function which returns an RNA sequence from the given DNA sequence
-} 
+  let rna = dna.replace(/T/g, "U");
+  return rna;
+}
 
 https://www.codewars.com/kata/convert-a-string-to-an-array/train/javascript
 
-function stringToArray(string){
-  let a = 0;
+function stringToArray(string) {
   let words = [];
-  for (i=0; i<string.length; i++) {
-    if (string[i] !== " ") {
-      words[a] += string[i];
-    } else {
-      words.push;
-      a++;
-      }
-  } return [words];
+  words = string.split(" ");
+  return words;
 }
 
+https://www.codewars.com/kata/577a98a6ae28071780000989/train/javascript
+
+function min(list) {
+  let minimum = list[0];
+  for (let i = 0; i < list.length; i++) {
+    if (minimum - list[i] > 0) {
+      minimum = list[i];
+    }
+  }
+  return minimum;
+}
+
+function max(list) {
+  let maximum = list[0];
+  for (let i = 0; i < list.length; i++) {
+    if (maximum - list[i] < 0) {
+      maximum = list[i];
+    }
+  }
+  return maximum;
+}
+
+https://www.codewars.com/kata/544a54fd18b8e06d240005c0/train/javascript
+
+function min(arr, toReturn) {
+  let ind = 0;
+  let val = arr[0];
+  for (let i = 0; i < arr.lenth; i++) {
+    if (val - arr[i] > 0) {
+      val = arr[i];
+      ind = i;
+    }
+  }
+  if (toReturn === "value") {
+    return val;
+  } else {
+    return ind;
+  }
+}
