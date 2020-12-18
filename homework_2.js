@@ -67,12 +67,12 @@ function maps(x) {
 https://www.codewars.com/kata/find-the-first-non-consecutive-number/train/javascript
 
 function firstNonConsecutive(arr) {
-  let number = 0;
-  for (let i = 1; i < arr.length; i++) {
-    let con = [];
-    con[i] = arr[i] - arr[i - 1];
-    if (con[i] > con[i - 1]) {
-      return arr[i];
+  let itt = arr[1] - arr[0];
+  for (let i = 2; i < arr.length; i++) {
+    if (arr[i] - arr[i - 1] !== itt) {
+      let value = arr[i];
+      return value;
     }
   }
 }
+
