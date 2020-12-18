@@ -14,6 +14,28 @@ function stringToArray(string) {
 }
 
 https://www.codewars.com/kata/577a98a6ae28071780000989/train/javascript
+// the shortest
+
+function min(list){
+  return Math.min.apply(null, list);
+}
+
+function max(list){
+  return Math.max.apply(null, list);
+}
+
+// short
+function min(list){
+    list.sort(function(a,b){return(a-b)});
+    return list[0];
+}
+
+function max(list){
+    list.sort(function(a,b){return(b-a)});
+    return list[0];
+}
+
+// very long answer
 
 function min(list) {
   let minimum = list[0];
@@ -50,5 +72,50 @@ function min(arr, toReturn) {
     return val;
   } else {
     return ind;
+  }
+}
+
+https://www.codewars.com/kata/a-wolf-in-sheeps-clothing/train/javascript
+
+function warnTheSheep(queue) {
+  queue.reverse();
+  let N = queue.indexOf("wolf");
+  if (N === 0) {
+    return "Pls go away and stop eating my sheep";
+  }
+  return "Oi! Sheep number " + N + "! You are about to be eaten by a wolf!";
+}
+
+
+https://www.codewars.com/kata/57f781872e3d8ca2a000007e/train/javascript
+
+function maps(x) {
+  let y = x.map(doubling);
+  function doubling(value) {
+    return value * 2;
+  }
+  return y;
+}
+
+// without mapping 
+
+function maps(x) {
+  let y = [];
+  for (let i = 0; i < x.length; i++) {
+    y[i] = x[i] * 2;
+  }
+  return x, y;
+}
+
+https://www.codewars.com/kata/find-the-first-non-consecutive-number/train/javascript
+
+function firstNonConsecutive(arr) {
+  let number = 0;
+  for (let i = 1; i < arr.length; i++) {
+    let con = [];
+    con[i] = arr[i] - arr[i - 1];
+    if (con[i] > con[i - 1]) {
+      return arr[i];
+    }
   }
 }
