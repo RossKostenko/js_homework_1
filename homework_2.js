@@ -24,39 +24,6 @@ function max(list){
   return Math.max.apply(null, list);
 }
 
-// short
-function min(list){
-    list.sort(function(a,b){return(a-b)});
-    return list[0];
-}
-
-function max(list){
-    list.sort(function(a,b){return(b-a)});
-    return list[0];
-}
-
-// very long answer
-
-function min(list) {
-  let minimum = list[0];
-  for (let i = 0; i < list.length; i++) {
-    if (minimum - list[i] > 0) {
-      minimum = list[i];
-    }
-  }
-  return minimum;
-}
-
-function max(list) {
-  let maximum = list[0];
-  for (let i = 0; i < list.length; i++) {
-    if (maximum - list[i] < 0) {
-      maximum = list[i];
-    }
-  }
-  return maximum;
-}
-
 https://www.codewars.com/kata/544a54fd18b8e06d240005c0/train/javascript
 
 function min(arr, toReturn) {
@@ -95,16 +62,6 @@ function maps(x) {
     return value * 2;
   }
   return y;
-}
-
-// without mapping 
-
-function maps(x) {
-  let y = [];
-  for (let i = 0; i < x.length; i++) {
-    y[i] = x[i] * 2;
-  }
-  return x, y;
 }
 
 https://www.codewars.com/kata/find-the-first-non-consecutive-number/train/javascript
